@@ -14,6 +14,9 @@
 		40FEA86721A24A86001BFA11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA86621A24A86001BFA11 /* main.m */; };
 		40FEA87221A24A86001BFA11 /* J140_autoMate_softWareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA87121A24A86001BFA11 /* J140_autoMate_softWareTests.m */; };
 		40FEA87D21A24A86001BFA11 /* J140_autoMate_softWareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA87C21A24A86001BFA11 /* J140_autoMate_softWareUITests.m */; };
+		40FEA89121A259E2001BFA11 /* TCPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA88B21A259E2001BFA11 /* TCPManager.m */; };
+		40FEA89221A259E2001BFA11 /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA88C21A259E2001BFA11 /* TCPServer.m */; };
+		40FEA89321A259E2001BFA11 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEA88F21A259E2001BFA11 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,12 @@
 		40FEA87821A24A86001BFA11 /* J140_autoMate softWareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "J140_autoMate softWareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FEA87C21A24A86001BFA11 /* J140_autoMate_softWareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = J140_autoMate_softWareUITests.m; sourceTree = "<group>"; };
 		40FEA87E21A24A86001BFA11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40FEA88B21A259E2001BFA11 /* TCPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPManager.m; sourceTree = "<group>"; };
+		40FEA88C21A259E2001BFA11 /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
+		40FEA88D21A259E2001BFA11 /* TCPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPManager.h; sourceTree = "<group>"; };
+		40FEA88E21A259E2001BFA11 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		40FEA88F21A259E2001BFA11 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		40FEA89021A259E2001BFA11 /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,7 @@
 		40FEA85921A24A85001BFA11 /* J140_autoMate softWare */ = {
 			isa = PBXGroup;
 			children = (
+				40FEA88A21A2599D001BFA11 /* Socket */,
 				40FEA85A21A24A85001BFA11 /* AppDelegate.h */,
 				40FEA85B21A24A85001BFA11 /* AppDelegate.m */,
 				40FEA85D21A24A85001BFA11 /* ViewController.h */,
@@ -129,6 +139,19 @@
 				40FEA87E21A24A86001BFA11 /* Info.plist */,
 			);
 			path = "J140_autoMate softWareUITests";
+			sourceTree = "<group>";
+		};
+		40FEA88A21A2599D001BFA11 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				40FEA88E21A259E2001BFA11 /* GCDAsyncSocket.h */,
+				40FEA88F21A259E2001BFA11 /* GCDAsyncSocket.m */,
+				40FEA88D21A259E2001BFA11 /* TCPManager.h */,
+				40FEA88B21A259E2001BFA11 /* TCPManager.m */,
+				40FEA89021A259E2001BFA11 /* TCPServer.h */,
+				40FEA88C21A259E2001BFA11 /* TCPServer.m */,
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FEA89321A259E2001BFA11 /* GCDAsyncSocket.m in Sources */,
 				40FEA85F21A24A85001BFA11 /* ViewController.m in Sources */,
+				40FEA89121A259E2001BFA11 /* TCPManager.m in Sources */,
 				40FEA86721A24A86001BFA11 /* main.m in Sources */,
+				40FEA89221A259E2001BFA11 /* TCPServer.m in Sources */,
 				40FEA85C21A24A85001BFA11 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +448,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "J140_autoMate softWare/J140_autoMate_softWare.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "J140_autoMate softWare/Info.plist";
@@ -439,7 +464,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "J140_autoMate softWare/J140_autoMate_softWare.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "J140_autoMate softWare/Info.plist";
